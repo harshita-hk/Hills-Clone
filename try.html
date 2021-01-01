@@ -1,0 +1,698 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Hills-Hign-end accessories for Tesla</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <script src="https://use.fontawesome.com/06c2cc2792.js"></script>
+        <link href="//db.onlinewebfonts.com/c/510ffe41e9da712c26c6849b5c3eb9a5?family=QNYSCK+Graphik-Medium" rel="stylesheet" type="text/css"/>
+        <style>
+            /* @import url(//db.onlinewebfonts.com/c/510ffe41e9da712c26c6849b5c3eb9a5?family=QNYSCK+Graphik-Medium); */
+            @font-face {font-family: "Graphik-Medium"; src: url("//db.onlinewebfonts.com/t/373efd69166d31c2b5052a505527acbf.eot"); src: url("//db.onlinewebfonts.com/t/373efd69166d31c2b5052a505527acbf.eot?#iefix") format("embedded-opentype"), url("//db.onlinewebfonts.com/t/373efd69166d31c2b5052a505527acbf.woff2") format("woff2"), url("//db.onlinewebfonts.com/t/373efd69166d31c2b5052a505527acbf.woff") format("woff"), url("//db.onlinewebfonts.com/t/373efd69166d31c2b5052a505527acbf.ttf") format("truetype"), url("//db.onlinewebfonts.com/t/373efd69166d31c2b5052a505527acbf.svg#Graphik-Medium") format("svg"); }
+            body{
+                margin:0;
+                padding: 0;
+                letter-spacing: normal;
+                overflow-y: scroll;
+            }
+            body::-webkit-scrollbar {
+                display: none;
+            }
+            
+            nav{
+                width: 100%;
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                align-content: center;
+                height: 60px;
+                padding: 5px;
+                overflow: hidden;
+                position: fixed;
+                top: 0;
+                z-index: 9;
+                margin-bottom: 50px;
+            }
+            a{text-decoration: none;
+            cursor: pointer;}
+            a.left,.left-1
+            {
+                position: relative;
+            }
+            a.left-1:before {
+                content: "";
+                position: absolute;
+                width: 0;
+                height: 1px;
+                bottom: 0;
+                left: 0;
+                background-color: white;
+                visibility: hidden;
+                transition: all 0.3s ease-in-out;
+            }
+            a.left:before {
+                content: "";
+                position: absolute;
+                width: 0;
+                height: 1px;
+                bottom: 0;
+                left: 0;
+                background-color: black;
+                visibility: hidden;
+                transition: all 0.3s ease-in-out;
+            }
+            a.left:hover:before,a.left-1:hover:before {
+                visibility: visible;
+                width: 100%;
+            }
+            nav a{
+                font-size: 15px;
+                font-weight: bold;
+                text-decoration: none;
+                color: #004225 ;
+                margin-left: 15px;
+                cursor: pointer;
+                padding: 5px;
+                margin-right: 5px; 
+                transition: 2s;
+                position: relative;
+                cursor: pointer;
+            }
+            .cart{
+                width: 30px;
+                height: 30px;
+                border-radius: 50%;
+                background-color: green;
+                margin-right: 30px;
+                color: white;
+                position: relative;
+            }
+            #lookbook,.accesories,#speed,#manufacture,.divide{
+                width: 95%;
+                margin-top:  50px;
+                padding: 50px 10px;
+                display: flex;
+                margin-left: 15px;
+                justify-content: space-around;
+                cursor: pointer;
+                
+            }
+            #main{
+                width: 100%;
+                height: 100vh;
+                background-image: url("images/main.jpeg");
+                background-size: cover;
+                background-position: center;
+                cursor: grab;
+            }
+            .main-text{
+                position: absolute;
+                bottom: 40px;
+                width: 100%;
+                display: flex;
+                justify-content: space-between;
+                align-items: flex-end;
+            }
+            .details{
+                margin-left: 40px;
+                width: 50%;
+                color: #fff;
+                display: flex;
+                flex-direction: column;
+            }
+            .details h2{
+                margin: 0px 0px 10px;
+            }
+            .progress{
+                width: 150px;
+                height: 1px;
+                position: relative;
+                background-color: hsla(0,50%,100%,.2);
+                top: 0;
+                left: 0;
+                z-index: 1;
+                /* border-radius: 1px; */
+                overflow: hidden;
+           }
+           .progress span {
+                position: absolute;
+                width: 50%;
+                height: 100%;
+                background: #fff;
+                top: 0;
+                left: 0;
+                z-index: 1;
+                border-radius: 1px;
+           }
+           .link{
+                width: 50%;
+                display: flex;
+                vertical-align: baseline;
+            }
+            .link a{
+                position: absolute;
+                right:  0;
+                text-align: right;
+                bottom:0;
+                display: inline-block;
+                color:#fff;
+                font-weight: bold;
+                margin-right: 25px;
+            }
+
+            .item{
+                display: flex;
+                flex-direction: column;
+                cursor: grab;
+                width: 400px;
+                margin-left: 30px;
+                overflow: hidden;
+                /* align-items: flex-start; */
+            }
+            .image-zoom-container{
+                width: 100%;
+                height: 450px;
+                overflow: hidden;
+            }
+            .image-zoom-container img{
+                width: 100%;
+                height: 450px;
+                border-radius: 3px;
+                transition: 0.8s all ease;
+            }
+            .image-zoom-container:hover img{
+                transform: scale(1.1);
+                border-radius: 3px;
+            }
+            .part{
+                overflow: hidden;
+                position: relative;
+                width: 100%;
+            
+            }
+            .item h5{
+                color: black;
+                font-weight: 500;
+                line-height: 1.5em;
+                font-size: 17px;
+                margin: 0;
+                padding: 0;
+                margin-top: 20px;
+            }
+            .price{
+                font-size: 15px;
+                font-weight: 300;
+                color: gray;
+                line-height: 2;
+                flex-wrap: wrap;
+            }
+            #lookbook{
+                margin-left: auto;
+                /* margin-right: auto; */
+                width: 100%;
+                padding: 40px 0px;
+            }
+            .lookbook-images{
+                margin-left: 40px;
+                width: 60%;
+                overflow: hidden;
+                height: auto;
+                display: flex;
+                justify-content: space-between;
+                flex-wrap: wrap;    
+                margin-bottom: 6px;
+                
+            }
+            .try{
+                width:385px;
+                overflow: hidden;
+                margin-top: 10px;  
+            }
+ 
+            .lookbook-text{
+                width: 40%;
+                display: flex;
+                flex-direction: column;
+                justify-content:  center;
+                flex-wrap: wrap;
+                overflow-y: hidden;
+                margin:0px 70px 0px;
+                padding: 0px 18px;  
+                pointer-events: none; 
+            }
+            .lookbook-text h1{
+                font-size: 42px;
+                margin-bottom: 60px;
+            }
+            .lookbook-text p{
+                font-size: 15px;
+                color: #666666;
+                margin-bottom: 20px;
+                line-height: 1.5em;
+            }
+            .lookbook-text h6{
+                font-size: 15px;
+                font-weight: 400;
+                margin-bottom: 6px;
+            }
+            .lookbook-link{
+                width: 50%;
+                display: flex;
+                vertical-align: baseline;
+            }
+            .lookbook-link a{
+                position: absolute;
+                text-align: right;
+                display: inline-block;
+                color:black;
+                font-size: 17px;
+                font-weight:700 ;
+                right: 45%;
+                padding-top: 5px;
+            }
+            figcaption{
+                font-size: 15px;
+                color: #666666;
+                position: relative;
+                /* right: 62%; */
+                margin-top: 10px;
+            }
+            .contain{
+                overflow: hidden;
+                width: 100%;
+                height: 570px;
+            }
+            .contain img{
+                width: 100%;
+                height: 570px;
+                transition: 1.5s ease-out;
+            }
+            .divide .contain:hover img{
+                transform: scale(1.1);
+            }
+            #manufacture{
+                padding: 10px;
+            }
+            #manufacture .item{
+                width: 33%;
+                margin-left: 30px;
+            }
+            #manufacture .item h5{
+                text-align: left;
+                font-size: 17px;
+                margin-bottom: 10px;
+                font-weight: 400;
+            }
+            #hidden{
+                margin-left: auto;
+                margin-right: auto;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                position: relative;
+                z-index: 1;
+                width: 100%;
+            }
+            #hidden h1{
+                text-align: center;
+                margin-bottom: 30px;
+                pointer-events: none;
+                width: 570px;
+                font-size: 50px;
+                z-index: 2;
+                position: relative;
+                line-height: 1.5em;
+            }
+            .divide .item{
+                width: 50%;
+                margin-left: 30px;
+            }
+            .text{
+                margin-top: 6px;
+                margin-left: 10px;
+            }
+            .text a{
+                color: black;
+                transition: 3s;
+            }
+            .text a:hover i{
+                margin-left: 20px;
+                font-weight: 400;
+            }
+            .footer-header{
+                width: 95%;
+                
+                padding-top: 10px;
+                padding-bottom: 50px;
+                display: flex;
+                justify-content: space-between;
+            }
+            .info{
+                margin-left: 40px;
+                width: 30%;
+                display: flex;
+                flex-direction: column;
+                align-self: start;
+                margin-right: 180px;
+
+            }
+            .info a{
+                margin-bottom: 15px;
+                width: 230px;
+                color: black;
+                font-size: 20px;
+                font-weight: bold;
+            }
+            .info p{
+                color: #979797;
+                margin-bottom: 40px;
+                font-size: 15px;
+                list-style: 2em;
+            }
+            .info form{
+                width: 100%;
+                background: 	#D8D8D8;
+                padding: 17px 18px;
+                position: relative;
+                overflow: hidden;
+                display: flex;
+                justify-content: space-between;
+            }
+            .left{
+                position: relative;
+                overflow: hidden;
+                flex: 1;
+                margin-right: 24px;
+            }
+            .right{
+                position: relative;
+                overflow: hidden;
+                display: flex;
+                justify-content: center;
+            }
+            input,button {
+                background: none;
+                outline: none;
+                border: none;
+                color: #404040;
+                opacity: .4;
+                cursor: not-allowed;
+            }
+            .footer-header-links{
+                width: 20%;
+                margin-left: 10px;
+            }
+            .footer-header-links h6{
+                margin-bottom: 20px;
+                margin-top: 0px;
+                color: #979797;
+                font-size: 18px;
+                display: flex;
+                flex-direction: column;
+                align-self: start;
+            }
+            ul,li{list-style: none;margin: 0;padding: 0;}
+            li{
+                display: list-item;
+                margin-bottom: 10px;
+            }
+            li a{
+                color: black;
+                font-size: 15px;
+                font-weight: 400;
+            }
+            .footer-bottom{
+                width: 100%;
+                padding-top: 30px;
+                padding-bottom: 30px;
+                background: #424242;
+                display: flex;
+                align-items: center;
+                font-size: 13px;
+            }
+            .footer-bottom span{
+                color: #fff;
+                letter-spacing: .24px;
+                margin-right: 18px;
+                margin-left: 40px;
+            }
+            .footer-bottom a{
+                color: #a0a0a0;
+                font-size: 13px;
+                letter-spacing: .24px;
+            }
+        </style>
+    </head>
+    <body>
+        <nav>
+            <div>
+                <a href="#" class="left">Shop</a>
+                <a href="#"class="left">Explore</a>
+           </div>
+            <div>
+                <img src="images/logo1.png" style="margin-top: 10px;">
+            </div>
+            <div>
+               <a href="#"class="left">Help</a>
+                <button class="cart">0
+                </button>
+            </div>
+        </nav>
+
+        <section id="main">
+            <div class="main-text">
+                <div class="details" >
+                    <h2>High-end accessories for Tesla.</h2>
+                    <p style="margin-bottom: 30px;margin-top: 15px;"> 
+                        Timeless and distinctive products passionately tailored to order, to accentuate and define the Tesla Model 3 & Model Y, for a one-of-a-kind Tesla experience.
+                    </p>
+                    <div class="progress">
+                        <span></span>
+                    </div>
+                </div>
+                <div class="link">
+                    <a href="#" class="left-1">Customize your interior</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- accessories -->
+        <section class="accesories">
+            <a href="#">
+                <div class="item">
+                    <div class="image-zoom-container" > 
+                        <img src="images/center-console.jpg">
+                    </div>
+                    <div >
+                        <h5> Central Console Cover</h5>
+                    </div>
+                    <div class="price">
+                        from $149.00
+                    </div>    
+                </div>
+            </a>
+            <a href="#">
+                <div class="item">
+                    <div class="image-zoom-container">
+                       <img src="images/dashboard-cover.jpg">
+                    </div>
+                    <div >
+                        <h5> Dashboard Cover</h5>
+                    </div>
+                    <div class="price">
+                        from $179.00
+                    </div>    
+                </div>
+            </a>
+            <a href="#">
+                <div class="item">
+                    <div class="image-zoom-container">
+                        <img src="images/charger.jpg">
+                    </div>
+                    <div >
+                        <h5> Wireless Phone Charger</h5>
+                    </div>
+                    <div class="price">
+                        from $99.00
+                    </div>    
+                </div>
+            </a>
+            <!-- <a href="#">
+                <div class="item">
+                    <div class="image-zoom-container">
+                        <img src="images/giftcard.JPG">
+                    </div>
+                    <div >
+                        <h5> Gift Card</h5>
+                    </div>
+                    <div class="price">
+                        from $100.00
+                    </div>    
+                </div>
+            </a> -->
+
+        </section>
+
+        <section id="lookbook">
+            <div class="lookbook-images">
+                <div class="image-zoom-container" style="height:450px " >
+                    <img src="images/lookbook-1.jpg" >                
+                </div>
+                <div class="image-zoom-container try">
+                    <img src="images/lookbook-2.JPG"width="320px">
+                </div>
+                <div class="image-zoom-container try"  >
+                    <img src="images/lookbook-3.jpg" width="320px">
+                </div>
+                <div class="lookbook-link"><a href="# "class="left">View Lookbook</a></div>
+            </div>
+            <div class="lookbook-text">
+                <h1>A car like no other, styled like no other.</h1>
+                <p>Built with reverence for Tesla’s minimalist aesthetic and designed to enhance the Tesla experience, Hills ultra-unique style accessories add a touch of personal expression, to make the Tesla interior entirely unique.</p>
+
+
+                <h6>A cockpit worthy of the name</h6>
+                <p>Undeniably distinguished and unlike any other, Hills custom-made accessories epitomize distinction in a world of sameness.</p>
+
+                <h6>Hooked in the blink of an eye</h6>
+                <p>Elegantly shaped and handcrafted to complement Tesla's lean design, Hills accessories take Tesla's interior experience to the next level.</p>
+
+                <h6>Customizable with initials</h6>
+                <p>The ultimate statement of individuality, Hills engraved Dashboard Covers go the last mile in creating the ultimate Tesla experience.</p>
+            </div>
+
+        </section>
+
+        <section id="speed">
+            <div class="lookbook-text">
+                <h1>Convinced by the 0-60mph, seduced by the style.</h1>
+                <p>Driven by an appreciation for Tesla’s innovative technology and streamlined aesthetic, we set out to personalize the Tesla experience. Hills interior and exterior accessories are tailored to integrate seamlessly with the Tesla design, while showcasing individuality and personal style, for an experience like no other.</p>
+            </div>
+            <div class="lookbook-images">
+                <img src="images/dashboard.jpg" width="700px" height="500px" style="margin-right: 25px;">
+                <figcaption>Hills Dashboard covering a Tesla Model Y</figcaption>
+            </div>
+
+        </section>
+
+        <section id="manufacture">
+            <div class="item" style="margin-left: 20px;">
+                <div class="contain" >
+                    <img src="images/quality.JPG" >
+                </div>
+                <div>
+                    <h5>Quality wood, unique natural grooves</h5>
+                    <div class="price">Handselected for quality, durability, and purity of style, our all-natural wood selection includes six prized varieties from around the world, each with its own unique color tones and intrinsic wood grain.</div>
+                </div>
+            </div>
+
+            <div class="item">
+                <div class="contain" >
+                    <img src="images/made.JPG" alt="">
+                </div>
+                <div>
+                    <h5>Made in Europe, shipped worlwide</h5>
+                    <div class="price">Designed with passion and manufactured in Europe with German precision, our Tesla style accessories are delivered free within the US and available for shipping anywhere in the world..</div>
+                </div>
+            </div>
+
+            <div class="item">
+                <div class="contain" >
+                    <img src="images/customise.JPG" alt="">
+                </div>
+                <div>
+                    <h5>Customizable, made to order</h5>
+                    <div class="price">Custom-made to order, Hills accessories are intricately crafted to accentuate Tesla’s minimalist aesthetic. Select interior accessories are also customizable with personalized, engraved initials.</div>
+                </div>
+            </div>
+
+        </section>
+
+        <section id="hidden">
+            <h1>Minimalist, timeless, yet expressive.</h1>
+        </section>
+        <section class="divide">
+            <div class="item">
+                <div class="contain ">
+                    <img src="images/story.JPG" alt="">
+                </div>
+                <div class="text">
+                    <a href="#">Our Story <i class="fa fa-arrow-right" aria-hidden="true"></i></a>
+                </div>
+            </div>
+
+            <div class="item">
+                <div class="contain">
+                    <img src="images/wood-source.JPG" alt="">
+                </div>
+                <div class="text">
+                    <a href="#">Wood Source <i class="fa fa-arrow-right" aria-hidden="true"></i></a>
+                </div>
+            </div>
+        </section>
+
+        <footer>
+            <div class="footer-header">
+                <div class="info">
+                    <a href="#" class="left" >@hillsmade on Instagram </a>
+                    <p>I would like to receive communications about Hills products, services, stores, events and matters of cultural interest.</p>
+                    <form>
+                        <div class="left">
+                            <input type="text" placeholder="Email Address">
+                        </div>
+                        <div class="right">
+                            <button>Subscribe</button>
+                        </div>
+
+                    </form>
+                </div>
+
+                <div class="footer-header-links">
+                    <h6>
+                        Hils
+                    </h6>
+                    <ul>
+                        <li><a href="#" class="left"> Our Story</a></li>
+                        <li><a href="#"class="left"> Wood Source</a></li>
+                        <li><a href="#"class="left"> Corporate Gifting</a></li>
+                    </ul>
+                </div>
+                <div class="footer-header-links">
+                    <h6>
+                        Shop
+                    </h6>
+                    <ul>
+                        <li><a href="#"class="left"> Interior</a></li>
+                        <li><a href="#"class="left"> Gift Card</a></li>
+                        
+                    </ul>
+                </div>
+                <div class="footer-header-links">
+                    <h6>
+                        Help
+                    </h6>
+                    <ul>
+                        <li><a href="#"class="left"> Return a parcel</a></li>
+                        <li><a href="#"class="left"> Delivery and Returns</a></li>
+                        <li><a href="#"class="left"> FAQ's</a></li>
+                    </ul>
+                </div>
+
+            </div>
+            <div class="footer-bottom">
+                <span>
+                    &copy; Hills, a Melriver Company
+                </span>
+                <a href="#"class="left-1">Terms and Conditions,</a>
+                <a href="#"class="left-1">Privacy Policy,</a>
+                <a href="#"class="left-1">Cookie Policy,</a>
+                <a href="#"class="left-1">Return Policy,</a>
+                <span style="margin-left: 800px;">
+                    <a href="#" class="left-1"style="color: #fff;">USD</a>
+                    <a href="#" class="left-1"style="color: #fff;margin-left: 20px;">English</a>
+                </span>
+            </div>
+        </footer>
+    
+    </body>
+</html>
